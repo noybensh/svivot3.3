@@ -1,0 +1,65 @@
+
+<div class="modal-header">
+    <h3 class="modal-title">{{poi.name}}</h3>
+    <div  id="FavoriteModal">
+    
+            <a> <img ng-click="addFavorite(poi.poiID)"  ng-if="$root.isloged && !isFavorite($root.id)"  ng-style="{'height': '70'}"  ng-src="\components\Home\pics\heart.png">  </a>
+            <a> <img ng-click="addFavorite(poi.poiID)"  ng-if="$root.isloged && isFavorite($root.id)"  ng-style="{'height': '70'}"  ng-src="\components\Home\pics\fullheart.png">  </a>
+            </div>
+</div>
+
+<div class="modal-body">
+    <center>
+        <img ng-src="{{poi.picture}}" ng-style="{'height': '280px','width':'300px'}">
+    </center>
+    <div>
+            <center> <b> {{poi.description}} </b> </center> 
+    </div>
+    <div>
+            <b>Category:</b> {{poi.category}}
+    </div>
+    <div>
+            <b>Rank:</b> {{poi.rank}}
+    </div>
+   
+    <div>
+            <b>How many users watched this:</b> {{poi.numWatch}}
+    </div>
+    <b>What do you think?</b>
+    <div id="UserOnline" ng-if="$root.isloged" >
+                Rank this:
+                <input type="number" ng-model="rankNew" ng-change="changeRank(rankNew)"  max="5" min="1">
+                <br>
+                Give a review:
+                <br>
+                <textarea id="Review" ng-model="reviewNew" ng-change="changeRev(reviewNew)" type="text"></textarea>
+                <button class="btn btn-success pull-right" ng-click="giveR()">save your opinion</button>   
+        </div>
+    </br>
+    <div ng-if="reviews.length>0">
+        <center>   
+        <b>Recent reviews:</b>
+            <div id="rcorners2" ng-repeat="rev in reviews">
+            
+                    <b>review by:</b>{{rev.userName}}
+                    </br> <b>Review: </b> {{rev.review}}
+                    </br>
+                    <b>Rank: </b> {{rev.rank}} 
+                    </br>
+                    <b>Date posted: </b>{{rev.date}}</li> 
+                  
+            </div>
+        </center>
+    </div>
+    <div ng-if="reviews.length==0">
+            <b>No reviews yet.</b>
+    </div>
+
+
+
+
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+</div>

@@ -1,0 +1,36 @@
+
+
+<div ng-show="$root.loginShow">
+<table>        
+        <td>
+                login here
+                <input type="text "  ng-model="logCtrl.user[1]" placeholder="Username">
+                <input type="password"  ng-model="logCtrl.user[2]"  placeholder="Password">
+                <button ng-click="logCtrl.login() ">Login</button></br></br>
+                <span ng-bind="logCtrl.login.content"></span>
+                <p>Forgot your password?</p>
+                <button ng-click="logCtrl.restorePassword()">click here</button></br></br>
+        </td>                                     
+</table>
+</div>
+
+<div ng-show="$root.show">
+        <h3>Restore Your Password</h3>
+</br>
+            
+                
+                    <h4>please enter username</h4>
+</br>
+                    <input type="text" ng-model="logCtrl.restoreUsername">
+</br>
+                   <select id="q1" ng-model="logCtrl.Q1" required>
+                        <option ng-repeat="x in logCtrl.questions1">{{x}}</option>
+                      </select>
+                    <input type="text" ng-model="logCtrl.restoreAns"></br>
+                    <button ng-click="logCtrl.restore()">restore</button></br></br>
+                    <span ng-bind="logCtrl.restore.content"></span>
+                    <button ng-click="logCtrl.backToLogin()">Back</button>
+                    <span ng-bind="logCtrl.backToLogin.content"></span>
+                
+            
+    </div>

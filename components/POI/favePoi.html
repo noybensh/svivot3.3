@@ -1,0 +1,41 @@
+
+
+<h2>Your favorites</h2>
+<div ng-init="faveCtrl.allPoi()">
+    <button ng-click="faveCtrl.rank()">By rank</button>
+
+
+
+    <div class="row">  
+
+        <div class="col-md-4" ng-repeat="poi in faveCtrl.allPois | orderBy:faveCtrl.ranki">
+            <div class="thumbnail"  >
+            <div href="" target="_blank" >
+                
+                    <center> <p>{{ poi.name }}</p> </center>
+                    <center>
+            <img ng-src="{{poi.picture}}" ng-style="{'height': '280px','width':'300px'}">
+                    </center>
+                <div class="caption">
+                  
+            
+            <center> <p>categori : {{ poi.category }}</p> </center> 
+            <center> <p> rank: {{ poi.rank }}</p> </center>  
+        <center>
+            <button type="button" class="btn btn-default" ng-click="favePoiCtrl.opentheBook(poi)">Open me!</button>
+            <b>choose place:</b>
+            <input type="number" ng-model="favePoiCtrl.place" ng-change="setPlace(favePoiCtrl.place,poi)"  max=1 min="0">
+                </center>
+                </div>     <!--  <a class="nameSites" >{{ poi.description }}</a><br/><br/>-->
+            </div>
+        
+            </div>
+        
+
+        </div>
+    </br>
+    </div>
+
+</div>
+
+

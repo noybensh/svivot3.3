@@ -1,0 +1,115 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+
+
+    h8 {
+		font-family: 'Source Sans Pro', sans-serif;
+      font-size: 3em;
+      font-weight: 300;
+      color: rgba(128, 26, 26, 0.7);
+      display: inline-block;
+      padding-bottom: 5px;
+      
+    }
+  
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: #111;
+    }
+
+    ul span {
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+
+
+#fregister {
+      padding: 15px;
+  width: 400px;
+  min-height: 400px;
+  margin: 2% auto 0 auto;
+    padding-left: 20px;
+    background-color: #660e0e;
+    color:darkslategray;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:darkslategray;
+    border: 2px solid darkslategray;
+    
+    font-size: 14px;
+
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+   
+}
+
+#flogin {
+      padding: 15px;
+  width: 700px;
+  min-height: 500px;
+  margin: 2% auto 0 auto;
+    padding-left: 20px;
+    background-color: #dfdf20;
+    color:darkslategray;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:darkslategray;
+    border: 2px solid darkslategray;
+    
+    font-size: 14px;
+
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+   
+}
+
+#register {
+    padding-left: 20px;
+    background-color: darkslategray;
+    color:white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration:black;
+    border: 2px solid black;
+  
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 10px; 
+    width: 500px;
+    height: 100px;    
+}

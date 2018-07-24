@@ -1,0 +1,71 @@
+
+<html ng-app="citiesApp">
+    <head><title>Cities App</title>
+        
+            <meta charset="UTF-8">
+              <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+             
+      
+            <link rel="stylesheet" type="text/css" href="style.css" />
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+      
+       
+        
+       
+</head>
+    <body ng-controller="indexController as indxCtrl" ng-init="initiate()">
+     
+       
+
+            <ul>
+              <li><a class="active" href="#/">Home</a></li>
+              <li><a href="#/poi">point of interest</a></li> 
+           <!--   <li><a href="#/service">service</a></li> -->
+              <span ng-model="indxCtrl.userName">hello {{$root.userName}}</span>   
+              <li><a href="#/login" ng-show="$root.loglbl == 'login'" ng-click="indxCtrl.setLogin()" >{{$root.loglbl}}</a></li>
+              <li><a href="#/" ng-show="$root.loglbl == 'logout'" ng-click="indxCtrl.logout()">{{$root.loglbl}}</a></li>
+              <li><a href="#/register" ng-show="$root.userName=='Guest'">register</a></li>  
+              <li><a href="#/about">About NYC</a></li>        
+            </ul>
+            
+        </br>
+    </br>
+        <div  ng-view></div>
+
+
+    </div>
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>       
+        <script src="app.js" ></script>
+        <script src="indexController.js" ></script>
+        <script src="components/Reg/regCtrl.js" ></script>
+        <script src="components/Login/logCtrl.js" ></script>
+        <script src="components/Home/homeCtrl.js"></script>
+        <script src="components/POI/allPOICtrl.js"></script>
+        <script src="components/POI/favePoiCtrl.js" ></script>
+        <script src="components/Services/serviceController.js" ></script>
+        <script src="components/Services/localStorageModel.js"></script>
+        <script src="components/Services/POIService.js"></script>
+        <script src="components/About/aboutController.js"></script>
+
+        
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.2.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+
+
+
+ 
+    </body>
+    </html>
+    
+    
+
+    

@@ -1,0 +1,46 @@
+
+
+<h2>Points Of Interests</h2>
+<div ng-init="allPOICtrl.allPoi()">
+<div id="goFave" ng-if="$root.isloged">
+    <b>You have {{$root.favorites.length}} points saves in your favorite</b>
+</br>
+    <button class="btn btn-success "  ng-click="allPOICtrl.goTo()">Go check your saved favorits</button>  
+</div> 
+</br>
+</br>
+    <button ng-click="allPOICtrl.change('All')">All</button>
+    <button ng-click="allPOICtrl.change('shopping')">Shopping</button>
+    <button ng-click="allPOICtrl.change('Hotels')">Hotels</button>
+    <button ng-click="allPOICtrl.change('restaurants')">Resturants</button>
+    <button ng-click="allPOICtrl.change('Places to visit')">Places to visit</button>
+    <button ng-click="allPOICtrl.rank()">By rank</button>
+
+
+
+    <div class="row">  
+
+        <div class="col-md-4" ng-repeat="poi in allPOICtrl.allPois | filter: allPOICtrl.filterd | orderBy:allPOICtrl.ranki">
+            <div class="thumbnail"  >
+            <a href="" target="_blank" >
+                
+                    <center> <p>{{ poi.name }}</p> </center>
+            <img ng-src="{{poi.picture}}" ng-style="{'height': '280px','width':'300px'}">
+                <div class="caption">
+                  
+            
+            <center> <p>categori : {{ poi.category }}</p> </center> 
+            <center> <p> rank: {{ poi.rank }}</p> </center>  
+            <button type="button" class="btn btn-default" ng-click="allPOICtrl.opentheBook(poi)">Open me!</button>
+
+                </div>     <!--  <a class="nameSites" >{{ poi.description }}</a><br/><br/>-->
+            </a>
+            </div>
+         
+
+        </div>
+    </div>
+
+</div>
+
+

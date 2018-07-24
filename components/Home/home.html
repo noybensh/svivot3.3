@@ -1,0 +1,71 @@
+<div ng-if="!$root.isloged" ng-init="homeCtrl.random3()">
+    <div class="container">
+            <p>Please log in or register to the site</p>
+            <button ng-click="homeCtrl.loginLocation()">Log in</button>
+            </br>
+            <button ng-click="homeCtrl.registerLocation()">Register</button>
+        </br>
+        </br>
+
+        <p>May interest you:</p>
+        <div class="row">
+          <div class="col-md-4" ng-repeat="poi in homeCtrl.randPOI" >
+            <div class="thumbnail"  >
+              <a href="" target="_blank">
+                  <center> <p>{{ poi.name }}</p> </center> 
+                <img ng-src="{{poi.picture}}" ng-style="{'height': '280px','width':'300px'}">
+                <div class="caption">
+                    <center> <p>categori : {{ poi.category }}</p> </center> 
+                    <center> <p> rank: {{ poi.rank }}</p> </center>  
+                    <button type="button" class="btn btn-default" ng-click="homeCtrl.opentheBook(poi)">Open me!</button>
+
+                 
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div ng-if="$root.isloged" ng-init="homeCtrl.categoryTwo()">
+        <div class="container">
+            <p>here are two points you might interest</p>
+            <div class="row">
+              <div class="col-md-4" ng-repeat="poi in homeCtrl.category2">
+                <div class="thumbnail"  >
+                  <a href="" target="_blank">
+                      <center> <p>{{ poi.poi}}</p> </center> 
+                    <img ng-src="{{poi.pic}}" ng-style="{'height': '280px','width':'300px'}">
+                    <div class="caption">  
+                        <button type="button" class="btn btn-default" ng-click="homeCtrl.opentheBook(poi)">Open me!</button>                     
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </br>
+
+      <div ng-if="$root.isloged" ng-init="homeCtrl.twoFav()">
+        <div class="container">
+            <div ng-if="homeCtrl.haveFave">
+                <p>here are two points you might interest</p>
+            <div class="row" >
+              <div class="col-md-4"  ng-repeat="poi in homeCtrl.fav2">
+                <div class="thumbnail" >
+                  <a href="" target="_blank">
+                      <center> <p>{{ poi.poi}}</p> </center>
+                    <img ng-src="{{poi.pic}}" ng-style="{'height': '280px','width':'300px'}">
+                    <div class="caption">
+                        <button type="button" class="btn btn-default" ng-click="homeCtrl.opentheBook(poi)">Open me!</button>  
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>        
+        
